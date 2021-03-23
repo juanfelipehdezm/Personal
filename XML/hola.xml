@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bookstore xmlns:xlink="http://www.w3.org/1999/xlink">
+  <book category="children">
+    <id>1</id>
+    <title lang ="en">Harry Potter</title>
+    <author>J K. Rowling</author>
+    <year>2005</year>
+    <price>29.99</price>
+    <description xlink:type="simple" xlink:href="/images/HPotter.gif" xlink:show="new">
+    As his fifth year at Hogwarts School of Witchcraft and
+    Wizardry approaches, 15-year-old Harry Potter is.......
+    </description>
+  </book>
+  <book category="web">
+    <id>2</id>
+    <title lang ="en">Learning XML</title>
+    <author>Erik T. Ray</author>
+    <year>2003</year>
+    <price>39.95</price>
+  </book>
+  <book category="web">
+    <id>3</id>
+    <title lang="en">XQuery Kick Start</title>
+    <author>James McGovern</author>
+    <author>Per Bothner</author>
+    <author>Kurt Cagle</author>
+    <author>James Linn</author>
+    <author>Vaidyanathan Nagarajan</author>
+    <year>2003</year>
+    <price>49.99</price>
+    <description xlink:type="simple" xlink:href="/images/XQuery.gif" xlink:show="new">
+    XQuery Kick Start delivers a concise introduction
+    to the XQuery standard.......
+    </description>
+  </book>
+  <book category="web">
+    <id>4</id>
+    <title lang="en">Learning XML</title>
+    <author>Erik T. Ray</author>
+    <year>2003</year>
+    <price>39.95</price>
+  </book>
+</bookstore>
+
