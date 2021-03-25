@@ -1,77 +1,102 @@
-<!--
-This element tells the browser about the structure of your website. 
-h1 elements are often used for main headings, while h2 elements are generally used for subheadings. 
-There are also h3, h4, h5 and h6 elements to indicate different levels of subheadings.-->
-<h1>Hello</h1>
-<h2>CatPhotoApp</h2>
-<!--HTML5 introduces more descriptive HTML tags. These include main, header, footer, nav, video, article, section and others.
-These tags give a descriptive structure to your HTML, make your HTML easier to read, and help with 
-Search Engine Optimization (SEO) and accessibility. The main HTML5 tag helps search engines and other developers find 
-the main content of your page.-->
-<main>
-  <!--You can add images to your website by using the img element, and point to a specific image's URL using the src attribute.
- All img elements must have an alt attribute. The text inside an alt attribute is used for screen readers to improve accessibility and is displayed if the image fails to load.
- Note: If the image is purely decorative, using an empty alt attribute is a best practice.-->
-  <img src="https://bit.ly/fcc-relaxing-cat" alt="Relaxing Cat.">
-  <!--You can use a (anchor) elements to link to content outside of your web page.
-  a elements need a destination web address called an href attribute. They also need anchor text
-  target="_blank" this causes the linked document to open in a new window tab.-->
-  <!--<a href="https://freecatphotoapp.com" target="_blank">cat photos</a>-->
-  <!--a(anchor) elements can also be used to create internal links to jump to different sections within a webpage.
+<!DOCTYPE html>
+<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+<html lang="en">
+  <head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>CAT APP prueba</title>
+  </head>
+  <style>
+    /*Classes are reusable styles that can be added to HTML elements.
+    Here's an example CSS class declaration:*/
+    .vinotinto-class {color:rgba(46, 33, 8, 0.795);}
+    .gold-class {color:rgb(218, 205, 34);}
+    /*Font size is controlled by the font-size CSS property, like this:*/
+    /*You can set which font an element should use, by using the font-family property.*/
+    p {font-size :20px; font-family: 'Times New Roman';}
+    h1 {font-family: "Lobster";}
+  </style>
+  <body>
+    <!--This element tells the browser about the structure of your website. 
+   h1 elements are often used for main headings, while h2 elements are generally used for subheadings. 
+   There are also h3, h4, h5 and h6 elements to indicate different levels of subheadings.-->
+    <h1 class="vinotinto-class">Hello</h1>
+    <h2 class="gold-class">CatPhotoApp Mine</h2>
+    <!--HTML5 introduces more descriptive HTML tags. These include main, header, footer, nav, video, article, section and others.
+    These tags give a descriptive structure to your HTML, make your HTML easier to read, and help with 
+    Search Engine Optimization (SEO) and accessibility. The main HTML5 tag helps search engines and other developers find 
+    the main content of your page.-->
+    <main>
+      <!--You can add images to your website by using the img element, and point to a specific image's URL using the src attribute.
+  All img elements must have an alt attribute. The text inside an alt attribute is used for screen readers to improve accessibility and is displayed if the image fails to load.
+  Note: If the image is purely decorative, using an empty alt attribute is a best practice.-->
+      <img src="https://bit.ly/fcc-relaxing-cat" alt="Relaxing Cat.">
+      <!--You can use a (anchor) elements to link to content outside of your web page.
+      a elements need a destination web address called an href attribute. They also need anchor text
+      target="_blank" this causes the linked document to open in a new window tab.-->
+      <!--<a href="https://freecatphotoapp.com" target="_blank">cat photos</a>-->
+      <!--a(anchor) elements can also be used to create internal links to jump to different sections within a webpage.
    To create an internal link, you assign a link's href attribute to a hash symbol # plus the value of the id attribute for the element 
    that you want to internally link to, usually further down the page. You then need to add the same id attribute to the element you are 
    linking to. An id is an attribute that uniquely describes an element.-->
-  <a href="#footer">Jump to Bottom</a>
-  <!--p elements are the preferred element for paragraph text on websites. p is short for "paragraph".-->
-  <p>Kitty ipsum dolor sit amet, shed everywhere shed everywhere stretching attack your ankles chase the red dot, 
-     hairball run catnip eat the grass sniff.</p>
-  <p>Purr jump eat the grass rip the couch scratched sunbathe, shed everywhere rip the couch sleep in the sink fluffy 
-     fur catnip scratched.</p>
-  <!--Unordered lists start with an opening <ul> element, followed by any number of <li> elements. Finally, unordered lists close with a </ul>-->
-  <p>Things cats love:</p>
-  <ul>
-     <li>cat nip</li>
-     <li>laser pointers</li>
-     <li>lasagna</li>
-    </ul>
-  <!--Ordered lists start with an opening <ol> element, followed by any number of <li> elements. Finally, ordered lists are closed with the </ol> tag.-->
-  <p>Top 3 things cats hate:</p>
-  <ol>
-     <li>dogs</li>
-     <li>humans</li>
-     <li>other cats</li>
-  </ol> 
-  <!--input elements are a convenient way to get input from your user. You can create a text input like this:
-   Placeholder text is what is displayed in your input element before your user has inputted anything.-->
-  <!--You can build web forms that actually submit data to a server using nothing more than pure HTML. 
-   You can do this by specifying an action attribute on your form element.-->
-  <form action="https://freecatphotoapp.com/submit-cat-photo">
-     <input type="text" placeholder="Cat Photo URL" required><br><!--br placed the next line under the actual-->
-     <!--You can use radio buttons for questions where you want the user to only give you one answer out of multiple options.Radio buttons are a type of input.
-      Each of your radio buttons can be nested within its own label element. By wrapping an input element inside of a label element it will automatically 
-      associate the radio button input with the label element surrounding it.All related radio buttons should have the same name attribute to create a radio button group.
-      By creating a radio group, selecting any single radio button will automatically deselect the other buttons within the same group ensuring only one answer is provided 
-      by the user.-->
-      <label for="indoor">
-        <input id="indoor" value="indoor" type="radio" name="indoor-outdoor">Indoor
-      </label>
-      <label for="outdoor">
-        <input id="outdoor" value="outdoor" type="radio" name="indoor-outdoor">Outdoor
-      </label><br>
-      <!-- Lets add checkbox just like with radio buttoms-->
-      <label for="aggresive">
-        <input id="aggresive" value="aggresive" type="checkbox" name="personality">Aggresive
-      </label>
-      <label for="loving">
-        <input id="loving" value="loving" type="checkbox" name="personality">Loving
-      </label>
-      <label for="happy">
-        <input id="happy" value="happy" type="checkbox" name="personality">Happy
-      </label>
-      <!--Let's add a submit button to your form. Clicking this button will send the data from your form to the URL you specified with your form's action attribute.-->
-     <button type="submit">Submit</button>
-  </form>
-  <!--You can nest links within other text elements.-->
-  <p>View more <a href = "https://freecatphotoapp.com" target="_blank">cat photos</a></p>
-</main>
-<footer id="footer">Footer of page.</footer>
+      <a href="#footer">Jump to Bottom</a>
+      <!--p elements are the preferred element for paragraph text on websites. p is short for "paragraph".-->
+      <p>Kitty ipsum dolor sit amet, shed everywhere shed everywhere stretching attack your ankles chase the red dot, 
+        hairball run catnip eat the grass sniff.</p>
+      <p>Purr jump eat the grass rip the couch scratched sunbathe, shed everywhere rip the couch sleep in the sink fluffy 
+        fur catnip scratched.</p>
+     <!--The div element, also known as a division element, is a general purpose container for other elements.
+      The div element is probably the most commonly used HTML element of all.-->
+      <div>
+        <!--Unordered lists start with an opening <ul> element, followed by any number of <li> elements. Finally, unordered lists close with a </ul>-->
+        <p>Things cats love:</p>
+          <ul>
+            <li>cat nip</li>
+            <li>laser pointers</li>
+            <li>lasagna</li>
+          </ul>
+        <!--Ordered lists start with an opening <ol> element, followed by any number of <li> elements. Finally, ordered lists are closed with the </ol> tag.-->
+        <p>Top 3 things cats hate:</p>
+          <ol>
+            <li>dogs</li>
+            <li>humans</li>
+            <li>other cats</li>
+          </ol>  
+      </div>
+     <!--input elements are a convenient way to get input from your user. You can create a text input like this:
+      Placeholder text is what is displayed in your input element before your user has inputted anything.-->
+     <!--You can build web forms that actually submit data to a server using nothing more than pure HTML. 
+      You can do this by specifying an action attribute on your form element.-->
+      <form action="https://freecatphotoapp.com/submit-cat-photo">
+        <input type="text" placeholder="Cat Photo URL" required><br><!--br placed the next line under the actual-->
+         <!--You can use radio buttons for questions where you want the user to only give you one answer out of multiple options.Radio buttons are a type of input.
+         Each of your radio buttons can be nested within its own label element. By wrapping an input element inside of a label element it will automatically 
+         associate the radio button input with the label element surrounding it.All related radio buttons should have the same name attribute to create a radio button group.
+         By creating a radio group, selecting any single radio button will automatically deselect the other buttons within the same group ensuring only one answer is provided 
+         by the user.-->
+        <label for="indoor">
+          <input id="indoor" value="indoor" type="radio" name="indoor-outdoor">Indoor
+        </label>
+        <label for="outdoor">
+          <input id="outdoor" value="outdoor" type="radio" name="indoor-outdoor">Outdoor
+        </label><br>
+        <!-- Lets add checkbox just like with radio buttoms-->
+        <label for="aggresive">
+          <input id="aggresive" value="aggresive" type="checkbox" name="personality">Aggresive
+        </label>
+        <label for="loving">
+          <input id="loving" value="loving" type="checkbox" name="personality">Loving
+        </label>
+        <label for="happy">
+          <input id="happy" value="happy" type="checkbox" name="personality">Happy
+        </label>
+        <!--Let's add a submit button to your form. Clicking this button will send the data from your form to the URL you specified with your form's action attribute.-->
+        <button type="submit">Submit</button>
+      </form>
+       <!--You can nest links within other text elements.-->
+      <p>View more <a href = "https://freecatphotoapp.com" target="_blank">cat photos</a></p>
+    </main>
+    <footer id="footer">Footer of page.</footer>
+  </body>
+</html>
