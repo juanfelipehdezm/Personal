@@ -16,6 +16,16 @@
     /*You can set which font an element should use, by using the font-family property.*/
     p {font-size :20px; font-family: 'Times New Roman';}
     h1 {font-family: "Lobster";}
+    /*CSS has a property called width that controls an element's width. Just like with fonts, we'll use px (pixels) to specify the image's width.*/
+    /*Your cat photo currently has sharp corners. We can round out those corners with a CSS property called border-radius.*/
+    .smaller-image {width:150px; border-radius: 50%;}
+    /*CSS borders have properties like style, color and width.*/
+    .thick-green-border { border-color: green; border-width: 5px; border-style: solid;}
+    /*You can set an element's background color with the background-color property.*/
+    .silver-background { background-color: rgb(175, 206, 150);}
+    /*Here's an example of how you can take your element with the id attribute of cat-photo-element and give it the background color of green. In your style element:*/
+    #cat-form { background-color: rgb(228, 243, 18)} /* I had to add the id= elemente previously to the html form. */
+
   </style>
   <body>
     <!--This element tells the browser about the structure of your website. 
@@ -31,7 +41,7 @@
       <!--You can add images to your website by using the img element, and point to a specific image's URL using the src attribute.
   All img elements must have an alt attribute. The text inside an alt attribute is used for screen readers to improve accessibility and is displayed if the image fails to load.
   Note: If the image is purely decorative, using an empty alt attribute is a best practice.-->
-      <img src="https://bit.ly/fcc-relaxing-cat" alt="Relaxing Cat.">
+      <img class="smaller-image thick-green-border" src="https://bit.ly/fcc-relaxing-cat" alt="Relaxing Cat."><br>
       <!--You can use a (anchor) elements to link to content outside of your web page.
       a elements need a destination web address called an href attribute. They also need anchor text
       target="_blank" this causes the linked document to open in a new window tab.-->
@@ -48,7 +58,7 @@
         fur catnip scratched.</p>
      <!--The div element, also known as a division element, is a general purpose container for other elements.
       The div element is probably the most commonly used HTML element of all.-->
-      <div>
+      <div class ="silver-background">
         <!--Unordered lists start with an opening <ul> element, followed by any number of <li> elements. Finally, unordered lists close with a </ul>-->
         <p>Things cats love:</p>
           <ul>
@@ -68,7 +78,7 @@
       Placeholder text is what is displayed in your input element before your user has inputted anything.-->
      <!--You can build web forms that actually submit data to a server using nothing more than pure HTML. 
       You can do this by specifying an action attribute on your form element.-->
-      <form action="https://freecatphotoapp.com/submit-cat-photo">
+      <form id="cat-form" action="https://freecatphotoapp.com/submit-cat-photo">
         <input type="text" placeholder="Cat Photo URL" required><br><!--br placed the next line under the actual-->
          <!--You can use radio buttons for questions where you want the user to only give you one answer out of multiple options.Radio buttons are a type of input.
          Each of your radio buttons can be nested within its own label element. By wrapping an input element inside of a label element it will automatically 
