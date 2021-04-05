@@ -5,7 +5,7 @@
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>CAT APP prueba</title>
+   <title style="text-align:center;">CAT APP prueba</title>
   </head>
   <style>
     /*Classes are reusable styles that can be added to HTML elements.
@@ -15,14 +15,14 @@
     /*Font size is controlled by the font-size CSS property, like this:*/
     /*You can set which font an element should use, by using the font-family property.*/
     p {font-size :20px; font-family: 'Times New Roman';}
-    h1 {font-family: "Lobster";}
+    h1 {font-family: "Lobster"; text-align:center;}/*Text is often a large part of web content. CSS has several options for how to align it with the text-align property.*/
     /*CSS has a property called width that controls an element's width. Just like with fonts, we'll use px (pixels) to specify the image's width.*/
     /*Your cat photo currently has sharp corners. We can round out those corners with a CSS property called border-radius.*/
-    .smaller-image {width:150px; border-radius: 50%;}
+    .smaller-image {width:200px; border-radius: 50%;}
     /*CSS borders have properties like style, color and width.*/
     .thick-green-border { border-color: green; border-width: 5px; border-style: solid;}
     /*You can set an element's background color with the background-color property.*/
-    .silver-background { background-color: rgb(175, 206, 150);}
+    .kindOfGreen-background { background-color: rgb(175, 206, 150);}
     /*Here's an example of how you can take your element with the id attribute of cat-photo-element and give it the background color of green. In your style element:*/
     #cat-form { background-color: rgb(228, 243, 18)} /* I had to add the id= elemente previously to the html form. */
     /*For this challenge, you will use the [attr=value] attribute selector to style the checkboxes in CatPhotoApp. This selector matches and styles elements with a specific attribute value*/
@@ -33,7 +33,7 @@
    h1 elements are often used for main headings, while h2 elements are generally used for subheadings. 
    There are also h3, h4, h5 and h6 elements to indicate different levels of subheadings.-->
     <h1 class="vinotinto-class" style="color:red;">Hello</h1>
-    <h2 class="gold-class">CatPhotoApp Mine</h2>
+    <h2 class="gold-class" style="text-align:center;">CatPhotoApp Mine</h2>
     <!--HTML5 introduces more descriptive HTML tags. These include main, header, footer, nav, video, article, section and others.
     These tags give a descriptive structure to your HTML, make your HTML easier to read, and help with 
     Search Engine Optimization (SEO) and accessibility. The main HTML5 tag helps search engines and other developers find 
@@ -55,11 +55,11 @@
       <!--p elements are the preferred element for paragraph text on websites. p is short for "paragraph".-->
       <p style="color:orange;">Kitty ipsum dolor sit amet, shed everywhere shed everywhere stretching attack your ankles chase the red dot, 
         hairball run catnip eat the grass sniff.</p>
-      <p>Purr jump eat the grass rip the couch scratched sunbathe, shed everywhere rip the couch sleep in the sink fluffy 
+      <p>Purr jump eat the grass rip the couch scratched sunbathe, shed everywhere <strong>rip the couch sleep in the sink fluffy</strong> 
         fur catnip scratched.</p>
      <!--The div element, also known as a division element, is a general purpose container for other elements.
       The div element is probably the most commonly used HTML element of all.-->
-      <div class ="silver-background">
+      <div class ="kindOfGreen-background">
         <!--Unordered lists start with an opening <ul> element, followed by any number of <li> elements. Finally, unordered lists close with a </ul>-->
         <p>Things cats love:</p>
           <ul>
