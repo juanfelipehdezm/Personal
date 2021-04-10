@@ -9,7 +9,12 @@
         holding the text you want to emphasize.The RGB values can range from 0 to 255. The alpha value can range from 1, which is fully opaque or a solid color, to 0, 
         which is fully transparent or clear*/
       background-color: rgba(45, 45, 45, 0.1);
-      font-size:25px;
+      font-size:20px;
+      /*The font-weight property sets how thick or thin characters are in a section of text.*/
+      font-weight: 100;
+      /*The text-transform property in CSS is used to change the appearance of text. It's a convenient way to make sure text on a webpage appears consistently, 
+       without having to change the text content of the actual HTML elements.*/
+      text-transform: uppercase;
   }
   /*Add a box-shadow to a Card-like Element
     The box-shadow property applies one or more shadows to an element.The box-shadow property takes values for
@@ -23,8 +28,18 @@
   #theCard{
     box-shadow:0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
   }
-  p {text-align:justify;}
-  .links {margin-right: 20px;}
+  p {
+    text-align:justify;
+    /*CSS offers the line-height property to change the height of each line in a block of text. As the name suggests, it changes the amount of vertical space that each 
+    line of text gets.*/
+    line-height: 20px;
+  }
+  .links {
+      margin-right: 20px;
+      /*The opacity property in CSS is used to adjust the opacity, or conversely, the transparency for an item.*/
+      color:black;
+      opacity: 0.70;
+  }
   .fullCard {
       /*You can specify the width of an element using the width property in CSS. Values can be given in relative length units (such as em), 
         absolute length units (such as px), or as a percentage of its containing parent element.*/
