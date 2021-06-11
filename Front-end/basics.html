@@ -14,26 +14,88 @@
     .gold-class {color:rgb(218, 205, 34);}
     /*Font size is controlled by the font-size CSS property, like this:*/
     /*You can set which font an element should use, by using the font-family property.*/
-    p {font-size :20px; font-family: 'Times New Roman';}
-    h1 {font-family: "Lobster"; text-align:center;}/*Text is often a large part of web content. CSS has several options for how to align it with the text-align property.*/
+    /*The line-height element allows u to decide the space between the lines of parrafo*/
+    p {font-size :20px; 
+       font-family: 'Times New Roman';
+       line-height: 15px;
+       }
+    h1 {font-family: "Lobster"; 
+        text-align:center;/*Text is often a large part of web content. CSS has several options for how to align it with the text-align property.*/
+        position:fixed; /* this would leave the element on a fixed position and wont move when u scroll. it is usuallu used wiht offset properties*/
+        margin: auto;}
     /*CSS has a property called width that controls an element's width. Just like with fonts, we'll use px (pixels) to specify the image's width.*/
     /*Your cat photo currently has sharp corners. We can round out those corners with a CSS property called border-radius.*/
-    .smaller-image {width:200px; border-radius: 50%;}
+    .smaller-image {width:300px; 
+                    border-radius: 50%;
+                    /*The next function of the transform property is skewX(), which skews the selected element along its X (horizontal) axis by a given degree.
+                    It also can be achived on the Y axis with sKewY()*/
+                    transform: skewX(10deg);}
     /*CSS borders have properties like style, color and width.*/
-    .thick-green-border { border-color: green; border-width: 5px; border-style: solid;}
+    .thick-green-border {border-color: green; 
+                         border-width: 5px; 
+                         border-style: solid;}
+    /*https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/learn-how-the-css-keyframes-and-animation-properties-work ANIMATION*/                     
+    #cat-image{
+      animation-name: rainbow;
+      animation-duration: 10s;
+    }
+    @keyframes rainbow{
+      0%{
+        border-color: green;
+      }
+      25%{
+        border-color:blue;
+      }
+      50%{
+        border-color:yellow;
+      }
+      100%{
+        border-color:red;
+      }
+    }
     /*You can set an element's background color with the background-color property.*/
-    .kindOfGreen-background { background-color: rgb(175, 206, 150);}
+    .kindOfGreen-background { background: repeating-linear-gradient(
+      45deg,
+      yellow 0px,
+      red 40px,/*https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/use-a-css-linear-gradient-to-create-a-striped-element*/
+      black 40px,
+      black 80px
+    );}
     /*Here's an example of how you can take your element with the id attribute of cat-photo-element and give it the background color of green. In your style element:*/
-    #cat-form { background-color: rgb(228, 243, 18)} /* I had to add the id= elemente previously to the html form. */
+    #cat-form { background-color: rgb(146, 148, 55)} /* I had to add the id= elemente previously to the html form. */
     /*For this challenge, you will use the [attr=value] attribute selector to style the checkboxes in CatPhotoApp. This selector matches and styles elements with a specific attribute value*/
     [type="checkbox"] { margin: 10px 0px 15px 0px;}
+    /*One way to add texture and interest to a background and have it stand out more is to add a subtle pattern. The key is balance, as you don't want the background to 
+    stand out too much, and take away from the foreground. The background property supports the url() function in order to link to an image of the chosen texture or 
+    pattern. The link address is wrapped in quotes inside the parentheses.*/
+    body { background: url(https://cdn-media-1.freecodecamp.org/imgr/MJAkxbh.png);}
+    #more_photos:hover { color:orange;}
+
+    /*To anime thwehover over the buttom first u must give some style*/
+    button {
+      border-radius: 5px;
+      color: white;
+      background-color: rgb(173, 174, 179);
+      padding: 5px 10px 8px 10px;
+    }
+    button:hover {
+      animation-name: background-color;
+      animation-duration: 3s;
+    }
+
+    @keyframes background-color {
+       100% {
+         background-color: #4791d0;
+       }
+    } 
+  
   </style>
   <body>
     <!--This element tells the browser about the structure of your website. 
    h1 elements are often used for main headings, while h2 elements are generally used for subheadings. 
    There are also h3, h4, h5 and h6 elements to indicate different levels of subheadings.-->
     <h1 class="vinotinto-class" style="color:red;">Hello</h1>
-    <h2 class="gold-class" style="text-align:center;">CatPhotoApp Mine</h2>
+    <h2 class="gold-class" style="text-align:center;">CatPhotoApp To Practice</h2>
     <!--HTML5 introduces more descriptive HTML tags. These include main, header, footer, nav, video, article, section and others.
     These tags give a descriptive structure to your HTML, make your HTML easier to read, and help with 
     Search Engine Optimization (SEO) and accessibility. The main HTML5 tag helps search engines and other developers find 
@@ -42,7 +104,7 @@
       <!--You can add images to your website by using the img element, and point to a specific image's URL using the src attribute.
   All img elements must have an alt attribute. The text inside an alt attribute is used for screen readers to improve accessibility and is displayed if the image fails to load.
   Note: If the image is purely decorative, using an empty alt attribute is a best practice.-->
-      <img class="smaller-image thick-green-border" src="https://bit.ly/fcc-relaxing-cat" alt="Relaxing Cat."><br>
+      <img id="cat-image" class="smaller-image thick-green-border" src="https://bit.ly/fcc-relaxing-cat" alt="Relaxing Cat."><br>
       <!--You can use a (anchor) elements to link to content outside of your web page.
       a elements need a destination web address called an href attribute. They also need anchor text
       target="_blank" this causes the linked document to open in a new window tab.-->
@@ -61,7 +123,7 @@
       The div element is probably the most commonly used HTML element of all.-->
       <div class ="kindOfGreen-background">
         <!--Unordered lists start with an opening <ul> element, followed by any number of <li> elements. Finally, unordered lists close with a </ul>-->
-        <p>Things cats love:</p>
+        <p style="color:white">Things cats love:</p>
           <ul>
             <li>cat nip</li>
             <li>laser pointers</li>
@@ -80,7 +142,7 @@
      <!--You can build web forms that actually submit data to a server using nothing more than pure HTML. 
       You can do this by specifying an action attribute on your form element.-->
       <form id="cat-form" action="https://freecatphotoapp.com/submit-cat-photo">
-        <input type="text" placeholder="Cat Photo URL" required><br><!--br placed the next line under the actual-->
+        <input type="text" placeholder="Cat Name" required><br><!--br placed the next line under the actual-->
          <!--You can use radio buttons for questions where you want the user to only give you one answer out of multiple options.Radio buttons are a type of input.
          Each of your radio buttons can be nested within its own label element. By wrapping an input element inside of a label element it will automatically 
          associate the radio button input with the label element surrounding it.All related radio buttons should have the same name attribute to create a radio button group.
@@ -106,7 +168,7 @@
         <button type="submit">Submit</button>
       </form>
        <!--You can nest links within other text elements.-->
-      <p>View more <a href = "https://freecatphotoapp.com" target="_blank">cat photos</a></p>
+      <p>View more <a id="more_photos" href = "https://freecatphotoapp.com" target="_blank">cat photos</a></p>
     </main>
     <footer id="footer">Footer of page.</footer>
   </body>
