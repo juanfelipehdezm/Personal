@@ -15,6 +15,10 @@
       /*The text-transform property in CSS is used to change the appearance of text. It's a convenient way to make sure text on a webpage appears consistently, 
        without having to change the text content of the actual HTML elements.*/
       text-transform: uppercase;
+      /*When the position of an element is set to relative, it allows you to specify how CSS should move it relative to its current position in the normal flow of the 
+      page. It pairs with the CSS offset properties of left or right, and top or bottom.*/
+      position: relative;
+      bottom:10px;
   }
   /*Add a box-shadow to a Card-like Element
     The box-shadow property applies one or more shadows to an element.The box-shadow property takes values for
@@ -46,9 +50,17 @@
       width:245px;
       border: 1px solid #ccc;
       border-radius: 5px;
-      margin: 10px 5px;
-      padding: 4px;
+      padding: 10px;
+      /*CSS provides the ability to use color transitions, otherwise known as gradients, on elements. 
+      The first argument specifies the direction from which color transition starts.The following arguments specify the order of colors used in the gradient. */
+      background: linear-gradient(90deg, #CCFFFF, #FFCCCC);
+      position: relative;
+      top:130px;
+      left:200px;
   }
+  .fullCard:hover {
+      /*you change the scale of an element, CSS has the transform property, along with its scale() function.*/
+      transform: scale(1.1);}
   .cardContent {padding: 10px; }
 </style>
   <div class="fullCard" id="theCard">
